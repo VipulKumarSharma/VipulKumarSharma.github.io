@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
+    .w3-bar-block .w3-bar-item{padding:6px}
+    .w3-large {font-size: 14px!important;}
+    ul li.w3-bar:nth-child(2n+1), ul li.w3-bar:nth-child(2n+1) span {
+      background-color: ghostwhite !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+  class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+  
+  <a id="myBtn" onclick="myFunc('Java')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Java<i class="w3-margin-left fa fa-caret-down"></i></a>
+  
+  <div id="Java" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('coreJava');w3_close();" id="coreJavaTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Core Java IQ</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('javaQuestions');w3_close();" id="javaQuestionsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Java Questions</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('collections');w3_close();" id="collectionsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Collections</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('multithreading');w3_close();" id="multithreadingTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Multithreading</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('memoryManagement');w3_close();" id="memoryManagementTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Memory Management</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('oops');w3_close();" id="oopsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">OOPS</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('designPatterns');w3_close();" id="designPatternsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Design Patterns</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('javaPrograms');w3_close();" id="javaProgramsTab">
+        <div class="w3-container">
+          <span class="w3-opacity w3-large">Java Programs</span>
+        </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('frameworks')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Frameworks<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="frameworks" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('spring');w3_close();" id="springTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Spring</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('springMvc');w3_close();" id="springMvcTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Spring MVC</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('springBoot');w3_close();" id="springBootTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Spring Boot</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('hibernate');w3_close();" id="hibernateTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Hibernate</span>
+      </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('frontend')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Frontend<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="frontend" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('angularJS');w3_close();" id="angularJSTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">AngularJS</span>
+      </div>
+    </a>
+
+  </div>
+  
+  <a id="myBtn" onclick="myFunc('webServices')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Web Services<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="webServices" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('rest');w3_close();" id="restTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">REST</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('soa');w3_close();" id="soaTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">SOA</span>
+      </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('database')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Database<i class="w3-margin-left fa fa-caret-down"></i></a>
+  
+  <div id="database" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('sql');w3_close();" id="sqlTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">SQL</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('queries');w3_close();" id="queriesTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Queries</span>
+      </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('dsAlgo')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>DS & Algo<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="dsAlgo" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('ds');w3_close();" id="dsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Data Structures</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('algorithms');w3_close();" id="algorithmsTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Algorithms</span>
+      </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('latestTech')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Latest Technologies<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="latestTech" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('git');w3_close();" id="gitTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">GIT</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('microservices');w3_close();" id="microservicesTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Microservices</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('mongoDb');w3_close();" id="mongoDbTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">MongoDB</span>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('docker');w3_close();" id="dockerTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">Docker</span>
+      </div>
+    </a>
+
+  </div>
+
+  <a id="myBtn" onclick="myFunc('nonTech')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Non Technical<i class="w3-margin-left fa fa-caret-down"></i></a>
+
+  <div id="nonTech" class="w3-hide w3-animate-left">
+    
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('hrIq');w3_close();" id="hrIqTab">
+      <div class="w3-container">
+        <span class="w3-opacity w3-large">HR IQ's</span>
+      </div>
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+  <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-top" onclick="w3_open()"></i>
+
+  <div id="coreJava" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Core Java</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2012/10/java-interview-questions-for-2-to-3-4-years-experienced.html" 
+              target="_blank">Java Interview Questions 2 to 4 years experienced</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2015/10/133-java-interview-questions-answers-from-last-5-years.html" 
+              target="_blank">130+ Java Interview Questions Answers for 2 to 7 Year Experienced</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/java-interview-questions/" 
+              target="_blank">Top 75 Java Interview Questions You Must Prepare In 2018</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Crunchify</span><br>
+          <span>
+            <a href="https://crunchify.com/top-10-java-interview-questions-answers-must-read-before-appearing-for-any-java-interview/" 
+              target="_blank">Top 10 Java Interview Questions Answers</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/2366/core-java-interview-questions-and-answers" 
+              target="_blank">Core Java Interview Questions and Answers</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Software Testing Help</span><br>
+          <span>
+            <a href="https://www.softwaretestinghelp.com/core-java-interview-questions/" 
+              target="_blank">Top 50+ Core Java Interview Questions and Answers</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru 99</span><br>
+          <span>
+            <a href="https://www.guru99.com/java-interview-questions-answers.html" 
+              target="_blank">Top 100 Java Interview Questions with Answers</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">How To Do In Java</span><br>
+          <span>
+            <a href="https://howtodoinjava.com/java-interview-questions/" 
+              target="_blank">Java Interview Questions – Guide 2018</a>
+          </span>
+        </div>
+      </li>
+
+
+
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Durgasoft</span><br>
+          <span>
+            <a href="http://www.durgasoft.com/Java_Interview_Questions.asp" 
+              target="_blank">Java FAQs and Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Tutorials Point</span><br>
+          <span>
+            <a href="http://www.tutorialspoint.com/java/java_interview_questions.htm" 
+              target="_blank">Java Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaTpoint</span><br>
+          <span>
+            <a href="https://www.javatpoint.com/corejava-interview-questions" 
+              target="_blank">300 Core Java Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2012/09/top-10-tricky-java-interview-questions-answers.html" 
+              target="_blank">Top 10 Tricky Java interview questions and Answers</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Codementor</span><br>
+          <span>
+            <a href="https://www.codementor.io/savingfunda/20-java-interview-questions-and-answers-from-investment-banks-98ghl6frw" 
+              target="_blank">20 Java IQ's from Investment Banks</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Codementor</span><br>
+          <span>
+            <a href="https://www.codementor.io/blog/java-interview-sample-questions-answers-du107xs23" 
+              target="_blank">37 Java Interview Questions and Answers</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="javaQuestions" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Java Questions</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Stack Overflow</span><br>
+          <span>
+            <a href="https://stackoverflow.com/questions/8798403/string-is-immutable-what-exactly-is-the-meaning" 
+              target="_blank">Immutability of Strings in Java</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Stack Overflow</span><br>
+            <span>
+              <a href="https://dzone.com/articles/why-string-immutable-java" 
+                target="_blank">Why String is Immutable in Java ?</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Java Revisited</span><br>
+            <span>
+              <a href="https://javarevisited.blogspot.com/2010/10/why-string-is-immutable-or-final-in-java.html?m=1" 
+                target="_blank">Why String is Immutable & final in Java ?</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">GeeksForGeeks</span><br>
+            <span>
+              <a href="https://www.geeksforgeeks.org/use-char-array-string-storing-passwords-java/" 
+                target="_blank">Why Strings are not recommended for storing passwords?</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Baeldung</span><br>
+            <span>
+              <a href="https://www.baeldung.com/java-8-new-features" 
+                target="_blank">Java 8 new features</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Dzone</span><br>
+            <span>
+              <a href="https://dzone.com/articles/java-classnotfoundexception-vs-noclassdeffounderro" 
+                target="_blank">ClassNotFoundException vs. NoClassDefFoundError</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Journal Dev</span><br>
+            <span>
+              <a href="https://www.journaldev.com/592/java-try-with-resources" 
+                target="_blank">try with resources</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Code Java</span><br>
+            <span>
+              <a href="https://www.codejava.net/java-core/exception/java-checked-and-unchecked-exceptions" 
+                target="_blank">Checked & Unchecked Exceptions</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Java By Patel</span><br>
+            <span>
+              <a href="http://javabypatel.blogspot.com/2015/10/what-is-load-factor-and-rehashing-in-hashmap.html" 
+                target="_blank">HashMap : Load Factor & Re-Hashing</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Dinesh On Java</span><br>
+            <span>
+              <a href="https://www.dineshonjava.com/how-does-java-hashmap-work-internally/" 
+                target="_blank">How HashMap works internally</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">JavaHungry</span><br>
+            <span>
+              <a href="https://javahungry.blogspot.com/2013/08/hashing-how-hash-map-works-in-java-or.html" 
+                target="_blank">HashMap Internal working</a>
+            </span>
+          </div>
+      </li>
+
+      <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Stack Overflow</span><br>
+            <span>
+              <a href="https://stackoverflow.com/questions/34510/what-is-a-race-condition" 
+                target="_blank">Race Condition</a>
+            </span>
+          </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="collections" class="w3-container person">
+      <br>
+      <h5 class="w3-opacity">Collections</h5>
+      <hr>
+      <ul class="w3-ul w3-card-4">
+        
+        <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Journal Dev</span><br>
+            <span>
+              <a href="https://www.journaldev.com/1330/java-collections-interview-questions-and-answers" 
+                target="_blank">40 Java Collections Interview QA's</a>
+            </span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">How To Do In Java</span><br>
+              <span>
+                <a href="https://howtodoinjava.com/interview-questions/useful-java-collection-interview-questions/" 
+                  target="_blank">Top 40 Collection interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">JavaTpoint</span><br>
+              <span>
+                <a href="https://www.javatpoint.com/java-collections-interview-questions" 
+                  target="_blank">Java Collections Interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Baeldung</span><br>
+              <span>
+                <a href="https://www.baeldung.com/java-collections-interview-questions" 
+                  target="_blank">Java Collections Interview Questions</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">JavaHungry</span><br>
+              <span>
+                <a href="https://javahungry.blogspot.com/2015/05/50-java-collections-interview-questions-and-answers.html" 
+                  target="_blank">Top 50 Java Collections Interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java Revisited</span><br>
+              <span>
+                <a href="https://javarevisited.blogspot.com/2011/11/collection-interview-questions-answers.html" 
+                  target="_blank">Top 25 Collection Framework Interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">SnowDream</span><br>
+              <span>
+                <a href="https://snowdream.github.io/115-Java-Interview-Questions-and-Answers/115-Java-Interview-Questions-and-Answers/en/collections.html" 
+                  target="_blank">Java Collections</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java Made So Easy</span><br>
+              <span>
+                <a href="https://www.javamadesoeasy.com/2015/05/collection-top-50-interview-questions.html" 
+                  target="_blank">Top 50 Collections Interview QA's</a>
+              </span>
+            </div>
+        </li>
+  
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java Questions</span><br>
+              <span>
+                <a href="http://java-questions.com/collections-interview-questions.html" 
+                  target="_blank">Top Collection Interview Questions</a>
+              </span>
+            </div>
+          </li>
+
+      </ul>
+    </div>
+
+  <div id="multithreading" class="w3-container person">
+      <br>
+      <h5 class="w3-opacity">Multithreading</h5>
+      <hr>
+      <ul class="w3-ul w3-card-4">
+        
+        <li class="w3-bar">
+          <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+          <div class="w3-bar-item">
+            <span class="w3-large">Journal Dev</span><br>
+            <span>
+              <a href="https://www.journaldev.com/1162/java-multithreading-concurrency-interview-questions-answers" 
+                target="_blank">Multithreading Concurrency IQ's</a>
+            </span>
+          </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">JavaTpoint</span><br>
+              <span>
+                <a href="https://www.javatpoint.com/java-multithreading-interview-questions" 
+                  target="_blank">Java Multithreading IQ's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java Revisited</span><br>
+              <span>
+                <a href="https://javarevisited.blogspot.com/2014/07/top-50-java-multithreading-interview-questions-answers.html" 
+                  target="_blank">Top 50 Java Thread Interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Dzone</span><br>
+              <span>
+                <a href="https://dzone.com/articles/threads-top-80-interview" 
+                  target="_blank">Top 80 Thread Interview QA's (Part 1)</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java67</span><br>
+              <span>
+                <a href="http://www.java67.com/2012/08/5-thread-interview-questions-answers-in.html" 
+                  target="_blank">Top 12 Thread, Concurrency & Multithreading IQ's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Java Code Geeks</span><br>
+              <span>
+                <a href="https://www.javacodegeeks.com/2014/11/multithreading-concurrency-interview-questions-answers.html" 
+                  target="_blank">Multithreading & Concurrency IQ's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Educba</span><br>
+              <span>
+                <a href="https://www.educba.com/java-multi-threading-interview-questions/" 
+                  target="_blank">Introduction to Multithreading Interview QA's</a>
+              </span>
+            </div>
+        </li>
+
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">JavaHungry</span><br>
+              <span>
+                <a href="https://javahungry.blogspot.com/2017/10/java-multithreading-interview-questions-and-answers.html" 
+                  target="_blank">Java Multithreading IQ's</a>
+              </span>
+            </div>
+        </li>
+  
+        <li class="w3-bar">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+            <div class="w3-bar-item">
+              <span class="w3-large">Dzone</span><br>
+              <span>
+                <a href="https://dzone.com/articles/top-15-java-multithreading-concurrency-interview-q" 
+                  target="_blank">Top 15 Multithreading Concurrency IQ's With Investment Banks</a>
+              </span>
+            </div>
+          </li>
+
+      </ul>
+    </div>
+
+  <div id="memoryManagement" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Memory Management</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java" 
+              target="_blank">JVM Memory Model</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dzone</span><br>
+          <span>
+            <a href="https://dzone.com/articles/java-memory-management" 
+              target="_blank">Java Memory Management</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="oops" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">OOPS</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dzone</span><br>
+          <span>
+            <a href="https://dzone.com/articles/the-solid-principles-in-real-life" 
+              target="_blank">SOLID Principles in Real Life</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">How To Do In Java</span><br>
+          <span>
+            <a href="https://howtodoinjava.com/best-practices/5-class-design-principles-solid-in-java/" 
+              target="_blank">5 Class Design Principles</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java2Blog</span><br>
+          <span>
+            <a href="https://java2blog.com/solid-principles-java/" 
+              target="_blank">SOLID Principles</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">in28Minutes</span><br>
+          <span>
+            <a href="https://in28minutes1.teachable.com/courses/257234/lectures/5762783" 
+              target="_blank">SOLID Principles</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="designPatterns" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Design Patterns</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaHungry</span><br>
+          <span>
+            <a href="https://javahungry.blogspot.com/2013/08/singleton-design-pattern-use-in-java.html" 
+              target="_blank">Singleton Design Patterns</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2011/03/10-interview-questions-on-singleton.html?m=1" 
+              target="_blank">10 Singleton Pattern IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/1827/java-design-patterns-example-tutorial" 
+              target="_blank">Java Design Patterns</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="javaPrograms" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Java Programs</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Concept Of the Day</span><br>
+          <span>
+            <a href="https://javaconceptoftheday.com/java-interview-programs-on-strings/" 
+              target="_blank">21 Java Interview Programs On Strings</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2015/01/top-20-string-coding-interview-question-programming-interview.html" 
+              target="_blank">Top 20 String Algorithm Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Quora</span><br>
+          <span>
+            <a href="https://www.quora.com/What-are-the-most-important-string-manipulation-questions-every-Computer-Science-student-should-know" 
+              target="_blank">String Manipulation Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2012/08/10-java-coding-interview-questions-and.html" 
+              target="_blank">Top 10 Java Programming Coding Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="spring" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Spring</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Code Geeks</span><br>
+          <span>
+            <a href="https://www.javacodegeeks.com/2014/05/spring-interview-questions-and-answers.html" 
+              target="_blank">Spring Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/spring-interview-questions/" 
+              target="_blank">Top 50 Spring IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/top-spring-interview-questions-2016/" 
+              target="_blank">Top Spring IQ's 2018</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/2696/spring-interview-questions-and-answers" 
+              target="_blank">Spring Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Intellipaat</span><br>
+          <span>
+            <a href="https://intellipaat.com/interview-question/spring-interview-questions/" 
+              target="_blank">Spring IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java 2 Blog</span><br>
+          <span>
+            <a href="https://java2blog.com/spring-interview-questions-and-answers/" 
+              target="_blank">Spring Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Grey Campus</span><br>
+          <span>
+            <a href="https://www.greycampus.com/blog/programming/top-spring-interview-questions-and-answers" 
+              target="_blank">Top 40 Spring Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2011/09/spring-interview-questions-answers-j2ee.html" 
+              target="_blank">Top 10 Spring Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="springMvc" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Spring MVC</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2012/08/spring-interview-questions-answers.html" 
+              target="_blank">Spring MVC Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">How To Do In Java</span><br>
+          <span>
+            <a href="https://howtodoinjava.com/interview-questions/spring-mvc-interview-questions-with-answers/" 
+              target="_blank">Spring MVC Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru99</span><br>
+          <span>
+            <a href="https://career.guru99.com/top-50-spring-questions-and-answers/" 
+              target="_blank">Top 50 Spring MVC Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Baeldung</span><br>
+          <span>
+            <a href="https://www.baeldung.com/spring-interview-questions" 
+              target="_blank">Spring MVC Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Interview</span><br>
+          <span>
+            <a href="http://www.javainterview.in/p/spring-mvc-interview-questions.html" 
+              target="_blank">Spring MVC Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dinesh On Java</span><br>
+          <span>
+            <a href="https://www.dineshonjava.com/spring-mvc-interview-questions-and-answers/" 
+              target="_blank">Spring MVC Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="springBoot" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Spring Boot</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Spring Boot Tutorial</span><br>
+          <span>
+            <a href="http://www.springboottutorial.com/spring-boot-interview-questions" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/8611/spring-boot-interview-questions" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java 67</span><br>
+          <span>
+            <a href="http://www.java67.com/2018/06/top-15-spring-boot-interview-questions-answers-java-jee-programmers.html" 
+              target="_blank">Top 15 Spring Boot IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Candid Java</span><br>
+          <span>
+            <a href="http://candidjava.com/tutorial/spring-boot-interview-questions/" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaTpoint</span><br>
+          <span>
+            <a href="https://www.javatpoint.com/spring-boot-interview-questions" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dinesh On Java</span><br>
+          <span>
+            <a href="https://www.dineshonjava.com/spring-boot-interview-questions-and-answers/" 
+              target="_blank">Spring Boot Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java In Use</span><br>
+          <span>
+            <a href="https://www.javainuse.com/spring/SpringBootInterviewQuestions" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java 2 Blog</span><br>
+          <span>
+            <a href="https://java2blog.com/spring-boot-interview-questions/" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Concrete Page</span><br>
+          <span>
+            <a href="https://www.concretepage.com/interview/spring-interview/spring-boot-interview-questions" 
+              target="_blank">Spring Boot Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="hibernate" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Hibernate</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2016/02/top-20-hibernate-interview-questions.html" 
+              target="_blank">Top 20 Hibernate IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/3633/hibernate-interview-questions-and-answers" 
+              target="_blank">Hibernate Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Developers Book</span><br>
+          <span>
+            <a href="http://www.developersbook.com/hibernate/interview-questions/hibernate-interview-questions-faqs-2.php" 
+              target="_blank">Hibernate IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2013/05/10-hibernate-interview-questions-answers-java-j2ee-senior.html" 
+              target="_blank">10 Hibernate Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaTpoint</span><br>
+          <span>
+            <a href="https://www.javatpoint.com/hibernate-interview-questions" 
+              target="_blank">Hibernate IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru99</span><br>
+          <span>
+            <a href="https://career.guru99.com/hibernate-interview-questions/" 
+              target="_blank">Top 50 Hibernate IQ's</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="angularJS" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">AngularJS</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">C Sharp Corner</span><br>
+          <span>
+            <a href="https://www.c-sharpcorner.com/article/top-50-angularjs-interview-questions-and-answers/" 
+              target="_blank">Top 50 AngularJS IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/top-angularjs-interview-questions-2016/" 
+              target="_blank">Top AngularJS IQ's 2016</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Online Interview Questions</span><br>
+          <span>
+            <a href="https://www.onlineinterviewquestions.com/angular-js-interview-questions/" 
+              target="_blank">AngularJS IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">TechBeamers</span><br>
+          <span>
+            <a href="https://www.techbeamers.com/latest-angularjs-interview-questions-answers/" 
+              target="_blank">Latest AngularJS Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Codementor</span><br>
+          <span>
+            <a href="https://www.codementor.io/blog/angularjs-interview-questions-sample-answers-du1081n7p" 
+              target="_blank">AngularJS IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru 99</span><br>
+          <span>
+            <a href="https://www.guru99.com/angular-js-interview-questions.html" 
+              target="_blank">AngularJS IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Stack Overflow</span><br>
+          <span>
+            <a href="https://stackoverflow.com/questions/18571301/angularjs-multiple-ng-app-within-a-page" 
+              target="_blank">Bootstrap Multiple Modules</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="rest" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">REST Web Services</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Interview</span><br>
+          <span>
+            <a href="http://www.javainterview.in/p/rest-web-services-interview-questions.html" 
+              target="_blank">REST Web Services IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Software Testing Help</span><br>
+          <span>
+            <a href="https://www.softwaretestinghelp.com/restful-web-services-interview-question/" 
+              target="_blank">Top 20 RESTful Web Services IQ's</a>
+          </span>
+        </div>
+      </li>
+
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2018/02/top-20-spring-rest-interview-questions-answers-java.html" 
+              target="_blank">Top 20 Spring REST IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dinesh On Java</span><br>
+          <span>
+            <a href="https://www.dineshonjava.com/spring-rest-web-services-interview-questions-and-answers/" 
+              target="_blank">Spring REST Web Services IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Journal Dev</span><br>
+          <span>
+            <a href="https://www.journaldev.com/9193/web-services-interview-questions-soap-restful" 
+              target="_blank">Web Services IQ's - SOAP & RESTful</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java67</span><br>
+          <span>
+            <a href="http://www.java67.com/2014/08/difference-between-post-and-get-request.html" 
+              target="_blank">Difference between GET & POST</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="soa" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Service Oriented Architecture</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java World</span><br>
+          <span>
+            <a href="https://www.javaworld.com/article/2071889/soa/what-is-service-oriented-architecture.html" 
+              target="_blank">SOA Architecture</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">BMC</span><br>
+          <span>
+            <a href="https://www.bmc.com/blogs/service-oriented-architecture-overview/" 
+              target="_blank">SOA Overview</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="sql" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">SQL</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/sql-interview-questions" 
+              target="_blank">Top 65 SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">SQL with Manoj</span><br>
+          <span>
+            <a href="https://sqlwithmanoj.com/2009/02/22/difference-between-truncate-delete-and-drop-commands/" 
+              target="_blank">Difference between TRUNCATE, DELETE and DROP</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Toptal</span><br>
+          <span>
+            <a href="https://www.toptal.com/sql/interview-questions" 
+              target="_blank">45 Essential SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Study Tonight</span><br>
+          <span>
+            <a href="https://www.studytonight.com/dbms/joining-in-sql.php" 
+              target="_blank">JOINS in SQL</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru 99</span><br>
+          <span>
+            <a href="https://www.guru99.com/sql-interview-questions-answers.html" 
+              target="_blank">Top 50 SQL IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaTpoint</span><br>
+          <span>
+            <a href="https://www.javatpoint.com/sql-interview-questions" 
+              target="_blank">SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Tutorials Point</span><br>
+          <span>
+            <a href="https://www.tutorialspoint.com/sql/sql_interview_questions.htm" 
+              target="_blank">SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Geeks 4 Geeks</span><br>
+          <span>
+            <a href="https://www.geeksforgeeks.org/sql-interview-questions/" 
+              target="_blank">SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">A4academics</span><br>
+          <span>
+            <a href="http://a4academics.com/interview-questions/53-database-and-sql/411-sql-interview-questions-and-answers-database?showall=&limitstart=" 
+              target="_blank">411 SQL Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="queries" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">SQL Queries</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2016/01/4-ways-to-find-nth-highest-salary-in.html" 
+              target="_blank">nth Highest Salary</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Code Project</span><br>
+          <span>
+            <a href="https://www.codeproject.com/Articles/25622/Sql-Queries-most-asked-in-job-interviews" 
+              target="_blank">Sql Queries most asked</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Quora</span><br>
+          <span>
+            <a href="https://www.quora.com/What-are-the-frequently-asked-basic-and-complex-queries-SQL-during-a-tech-interview" 
+              target="_blank">Frequently asked basic and complex queries</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Bull Raider</span><br>
+          <span>
+            <a href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql" 
+              target="_blank">Complex Queries in SQL</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="ds" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Data Structures</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Java Revisited</span><br>
+          <span>
+            <a href="https://javarevisited.blogspot.com/2017/07/top-10-linked-list-coding-questions-and.html" 
+              target="_blank">Top 30 Linked List Algorithm Questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Quora</span><br>
+          <span>
+            <a href="https://www.quora.com/What-are-some-interview-questions-on-linked-lists" 
+              target="_blank">Some interview questions on linked lists</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Dev Inline</span><br>
+          <span>
+            <a href="http://www.devinline.com/2015/10/linked-list-interview-questions-and-sample-code.html" 
+              target="_blank">Linked list interview questions</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Tutorials Point</span><br>
+          <span>
+            <a href="https://www.tutorialspoint.com/java/java_data_structures.htm" 
+              target="_blank">Java - Data Structures</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">CMU</span><br>
+          <span>
+            <a href="https://www.cs.cmu.edu/~adamchik/15-121/schedule.html" 
+              target="_blank">Course Syllabus</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">My Code School</span><br>
+          <span>
+            <a href="https://www.youtube.com/user/mycodeschool/playlists" 
+              target="_blank">Data Structures Videos</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="algorithms" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Algorithms</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Durga Soft</span><br>
+          <span>
+            <a href="https://www.youtube.com/playlist?list=PLd3UqWTnYXOmEcvqkqJgzYE6vPEyyU8m4" 
+              target="_blank">Dream MNC Algorithms</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Saurabh School</span><br>
+          <span>
+            <a href="https://www.youtube.com/user/saurabhschool/playlists?sort=dd&view=1" 
+              target="_blank">Algorithms</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Vivekanand Khyade</span><br>
+          <span>
+            <a href="https://www.youtube.com/user/vivekanandkhyade/playlists" 
+              target="_blank">Algorithms Everyday</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Tushar Roy</span><br>
+          <span>
+            <a href="https://www.youtube.com/user/tusharroy2525/playlists" 
+              target="_blank">Algorithms</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Princeton</span><br>
+          <span>
+            <a href="https://algs4.cs.princeton.edu/home/" 
+              target="_blank">Algorithms Course</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="git" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">GIT</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/git-interview-questions/" 
+              target="_blank">Top Git Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="microservices" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Microservices</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/microservices-interview-questions/" 
+              target="_blank">Top 50 Microservices Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="mongoDb" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">MongoDB</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/mongodb-interview-questions-for-beginners-and-professionals" 
+              target="_blank">MongoDB IQ's For Beginners And Professionals</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div id="docker" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">Docker</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Edureka</span><br>
+          <span>
+            <a href="https://www.edureka.co/blog/interview-questions/docker-interview-questions/" 
+              target="_blank">Top Docker Interview Questions</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  
+  <div id="hrIq" class="w3-container person">
+    <br>
+    <h5 class="w3-opacity">HR Interview Questions</h5>
+    <hr>
+    <ul class="w3-ul w3-card-4">
+      
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Naukri.com</span><br>
+          <span>
+            <a href="https://www.naukri.com/blog/frequently-asked-hr-interview-questions-and-answers/" 
+              target="_blank">53 HR Frequently Asked IQ's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">JavaHungry</span><br>
+          <span>
+            <a href="https://javahungry.blogspot.com/2014/04/top-15-must-prepare-behavioral-interview-questions-and-answers-hr-round-non-technical.html" 
+              target="_blank">Top 15 Must Prepare Behavioral QA's</a>
+          </span>
+        </div>
+      </li>
+
+      <li class="w3-bar">
+        <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+        <div class="w3-bar-item">
+          <span class="w3-large">Guru 99</span><br>
+          <span>
+            <a href="https://career.guru99.com/how-to-answer-50-most-common-interview-questions/" 
+              target="_blank">50 Most Common Interview QA's</a>
+          </span>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+
+<script>
+  var openInbox = document.getElementById("myBtn");
+  openInbox.click();
+
+  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+  }
+  function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+  }
+
+  function myFunc(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show"; 
+          x.previousElementSibling.className += " w3-red";
+      } else { 
+          x.className = x.className.replace(" w3-show", "");
+          //x.previousElementSibling.className = 
+          x.previousElementSibling.className.replace(" w3-red", "");
+      }
+  }
+
+  openMail("Java");
+
+  function openMail(personName) {
+      var i;
+      var x = document.getElementsByClassName("person");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x = document.getElementsByClassName("test");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" w3-light-grey", "");
+      }
+      document.getElementById(personName).style.display = "block";
+      //event.currentTarget.className += " w3-light-grey";
+  }
+</script>
+
+<script>
+  var openTab = document.getElementById("coreJavaTab");
+  openTab.click();
+</script>
+
+</body>
+</html> 
